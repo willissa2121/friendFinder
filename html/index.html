@@ -1,0 +1,408 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- Bootstrap CSS -->
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
+  <!-- Bootstrap core CSS -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Material Design Bootstrap -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.8.3/css/mdb.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+
+  <title>Hello, world!</title>
+</head>
+
+<body>
+
+  <!-- Jumbotron -->
+  <div class="card card-image" style="background-image: url(https://mdbootstrap.com/img/Photos/Others/forest2.jpg);">
+    <div class="text-white text-center rgba-stylish-strong py-5 px-4">
+      <div class="py-5">
+
+        <!-- Content -->
+        <h2 class="card-title h2 my-4 py-2">Friend Finder 2.0</h2>
+        <p class="mb-4 pb-2 px-md-5 mx-md-5">Welcome to the ultimate friend finding experience. Please take our
+          complimentary quiz, and we can match you with your new best friend!</p>
+        <button id="header-btn" class="btn peach-gradient"><i class="fas fa-clone left"></i>Begin Quiz</button>
+
+      </div>
+    </div>
+  </div>
+  <!-- Jumbotron -->
+
+  <div class="container text-center">
+
+    <h2 id="quiz-header">Please fill out every question to have the best friend matching experience!</h2>
+
+
+
+    <form id="form-group" method="post" action="/quiz">
+
+      <div class="question-group">
+        <!--Radio button group 'will be huge-->
+
+
+
+        <!-- Default inline 1-->
+        <h5>You hate the sun, it terrifies you</h5>
+
+        <div class="row">
+          <div class="col-md-2">
+            <p>Strongly Disagree</p>
+          </div>
+          <div class="col-md-2">
+            <p>Disagree</p>
+          </div>
+          <div class="col-md-2">
+            <p>Neutral</p>
+          </div>
+          <div class="col-md-2">
+            <p>Agree</p>
+          </div>
+          <div class="col-md-2">
+            <p>Strongly agree</p>
+          </div>
+        </div>
+
+
+        <div class="row q-row text-center">
+
+          <div class="col-md-2">
+            <div class="custom-control custom-radio custom-control-inline">
+              <input type="radio" value='1' class="custom-control-input" id="btn-1-one" name="btn1">
+              <label class="custom-control-label" for="btn-1-one">1</label>
+            </div>
+          </div>
+
+          <!-- Default inline 2-->
+          <div class="col-md-2">
+            <div class="custom-control custom-radio custom-control-inline">
+              <input type="radio" value='2' class="custom-control-input" id="btn-2-one"
+                name="btn1">
+              <label class="custom-control-label" for="btn-2-one">2</label>
+            </div>
+          </div>
+
+          <!-- Default inline 3-->
+          <div class="col-md-2">
+            <div class="custom-control custom-radio custom-control-inline">
+              <input type="radio" value='3' class="custom-control-input" id="btn-3-one" name="btn1">
+              <label class="custom-control-label" for="btn-3-one">3</label>
+            </div>
+          </div>
+
+          <!-- Default inline 2-->
+          <div class="col-md-2">
+            <div class="custom-control custom-radio custom-control-inline">
+              <input type="radio" value='4' class="custom-control-input" id="btn-4-one" name="btn1">
+              <label class="custom-control-label" for="btn-4-one">4</label>
+            </div>
+          </div>
+
+          <!-- Default inline 3-->
+          <div class="col-md-2">
+            <div class="custom-control custom-radio custom-control-inline">
+              <input type="radio" value='5' class="custom-control-input" id="btn-5-one" name="btn1">
+              <label class="custom-control-label" for="btn-5-one">5</label>
+            </div>
+          </div>
+        </div>
+
+
+        <!------------------------Start of Q2---------------------------------------------------------------------------------->
+
+        <!-- Default inline 1-->
+        <h5>You love staying at home on the weekend and gaming</h5>
+
+        <div class="row">
+          <div class="col-md-2">
+            <p>Strongly Disagree</p>
+          </div>
+          <div class="col-md-2">
+            <p>Disagree</p>
+          </div>
+          <div class="col-md-2">
+            <p>Neutral</p>
+          </div>
+          <div class="col-md-2">
+            <p>Agree</p>
+          </div>
+          <div class="col-md-2">
+            <p>Strongly agree</p>
+          </div>
+        </div>
+
+
+        <div class="row q-row text-center">
+
+          <div class="col-md-2">
+            <div class="custom-control custom-radio custom-control-inline">
+              <input type="radio" value='1' class="custom-control-input" id="btn-1-two" name="btn2">
+              <label class="custom-control-label" for="btn-1-two">1</label>
+            </div>
+          </div>
+
+          <!-- Default inline 2-->
+          <div class="col-md-2">
+            <div class="custom-control custom-radio custom-control-inline">
+              <input type="radio" value='2' class="custom-control-input" id="btn-2-two" name="btn2">
+              <label class="custom-control-label" for="btn-2-two">2</label>
+            </div>
+          </div>
+
+          <!-- Default inline 3-->
+          <div class="col-md-2">
+            <div class="custom-control custom-radio custom-control-inline">
+              <input type="radio" value='3' class="custom-control-input" id="btn-3-two" name="btn2">
+              <label class="custom-control-label" for="btn-3-two">3</label>
+            </div>
+          </div>
+
+          <!-- Default inline 2-->
+          <div class="col-md-2">
+            <div class="custom-control custom-radio custom-control-inline">
+              <input type="radio" value='4' class="custom-control-input" id="btn-4-two" name="btn2">
+              <label class="custom-control-label" for="btn-4-two">4</label>
+            </div>
+          </div>
+
+          <!-- Default inline 3-->
+          <div class="col-md-2">
+            <div class="custom-control custom-radio custom-control-inline">
+              <input type="radio" value='5' class="custom-control-input" id="btn-5-two" name="btn2">
+              <label class="custom-control-label" for="btn-5-two">5</label>
+            </div>
+          </div>
+        </div>
+
+
+        <!---Start of question 3=================================================================================================-->
+
+        <h5>You love Lebron James</h5>
+
+        <div class="row">
+          <div class="col-md-2">
+            <p>Strongly Disagree</p>
+          </div>
+          <div class="col-md-2">
+            <p>Disagree</p>
+          </div>
+          <div class="col-md-2">
+            <p>Neutral</p>
+          </div>
+          <div class="col-md-2">
+            <p>Agree</p>
+          </div>
+          <div class="col-md-2">
+            <p>Strongly agree</p>
+          </div>
+        </div>
+
+
+        <div class="row q-row text-center">
+
+          <div class="col-md-2">
+            <div class="custom-control custom-radio custom-control-inline">
+              <input type="radio" value='1' class="custom-control-input" id="btn-1-three" name="btn3">
+              <label class="custom-control-label" for="btn-1-three">1</label>
+            </div>
+          </div>
+
+          <!-- Default inline 2-->
+          <div class="col-md-2">
+            <div class="custom-control custom-radio custom-control-inline">
+              <input type="radio" value='2' class="custom-control-input" id="btn-2-three" name="btn3">
+              <label class="custom-control-label" for="btn-2-three">2</label>
+            </div>
+          </div>
+
+          <!-- Default inline 3-->
+          <div class="col-md-2">
+            <div class="custom-control custom-radio custom-control-inline">
+              <input type="radio" value='3' class="custom-control-input" id="btn-3-three" name="btn3">
+              <label class="custom-control-label" for="btn-3-three">3</label>
+            </div>
+          </div>
+
+          <!-- Default inline 2-->
+          <div class="col-md-2">
+            <div class="custom-control custom-radio custom-control-inline">
+              <input type="radio" value='4' class="custom-control-input" id="btn-4-three" name="btn3">
+              <label class="custom-control-label" for="btn-4-three">4</label>
+            </div>
+          </div>
+
+          <!-- Default inline 3-->
+          <div class="col-md-2">
+            <div class="custom-control custom-radio custom-control-inline">
+              <input type="radio" value='5' class="custom-control-input" id="btn-5-three" name="btn3">
+              <label class="custom-control-label" for="btn-5-three">5</label>
+            </div>
+          </div>
+        </div>
+
+
+        <!---Start of question 4=================================================================================================-->
+
+        <h5>When someone says gamer, you say 'rise Up'</h5>
+
+        <div class="row">
+          <div class="col-md-2">
+            <p>Strongly Disagree</p>
+          </div>
+          <div class="col-md-2">
+            <p>Disagree</p>
+          </div>
+          <div class="col-md-2">
+            <p>Neutral</p>
+          </div>
+          <div class="col-md-2">
+            <p>Agree</p>
+          </div>
+          <div class="col-md-2">
+            <p>Strongly agree</p>
+          </div>
+        </div>
+
+
+        <div class="row q-row text-center">
+
+          <div class="col-md-2">
+            <div class="custom-control custom-radio custom-control-inline">
+              <input type="radio" value='1' class="custom-control-input" id="btn-1-four" name="btn4">
+              <label class="custom-control-label" for="btn-1-four">1</label>
+            </div>
+          </div>
+
+          <!-- Default inline 2-->
+          <div class="col-md-2">
+            <div class="custom-control custom-radio custom-control-inline">
+              <input type="radio" value='2' class="custom-control-input" id="btn-2-four" name="btn4">
+              <label class="custom-control-label" for="btn-2-four">2</label>
+            </div>
+          </div>
+
+          <!-- Default inline 3-->
+          <div class="col-md-2">
+            <div class="custom-control custom-radio custom-control-inline">
+              <input type="radio" value='3' class="custom-control-input" id="btn-3-four" name="btn4">
+              <label class="custom-control-label" for="btn-3-four">3</label>
+            </div>
+          </div>
+
+          <!-- Default inline 2-->
+          <div class="col-md-2">
+            <div class="custom-control custom-radio custom-control-inline">
+              <input type="radio" value='4' class="custom-control-input" id="btn-4-four" name="btn4">
+              <label class="custom-control-label" for="btn-4-four">4</label>
+            </div>
+          </div>
+
+          <!-- Default inline 3-->
+          <div class="col-md-2">
+            <div class="custom-control custom-radio custom-control-inline">
+              <input type="radio" value='5' class="custom-control-input" id="btn-5-four" name="btn4">
+              <label class="custom-control-label" for="btn-5-four">5</label>
+            </div>
+          </div>
+        </div>
+
+        <!---Start of questfour=================================================================================================-->
+
+        <h5>When someone says gamer, you say 'rise Up'</h5>
+
+        <div class="row">
+          <div class="col-md-2">
+            <p>Strongly Disagree</p>
+          </div>
+          <div class="col-md-2">
+            <p>Disagree</p>
+          </div>
+          <div class="col-md-2">
+            <p>Neutral</p>
+          </div>
+          <div class="col-md-2">
+            <p>Agree</p>
+          </div>
+          <div class="col-md-2">
+            <p>Strongly agree</p>
+          </div>
+        </div>
+
+
+        <div class="row q-row text-center">
+
+          <div class="col-md-2">
+            <div class="custom-control custom-radio custom-control-inline">
+              <input type="radio" value='1' class="custom-control-input" id="btn-1-five" name="btn5">
+              <label class="custom-control-label" for="btn-1-five">1</label>
+            </div>
+          </div>
+
+          <!-- Default inline 2-->
+          <div class="col-md-2">
+            <div class="custom-control custom-radio custom-control-inline">
+              <input type="radio" value='2' class="custom-control-input" id="btn-2-five" name="btn5">
+              <label class="custom-control-label" for="btn-2-five">2</label>
+            </div>
+          </div>
+
+          <!-- Default inline 3-->
+          <div class="col-md-2">
+            <div class="custom-control custom-radio custom-control-inline">
+              <input type="radio" value='3' class="custom-control-input" id="btn-3-five" name="btn5">
+              <label class="custom-control-label" for="btn-3-five">3</label>
+            </div>
+          </div>
+
+          <!-- Default inline 2-->
+          <div class="col-md-2">
+            <div class="custom-control custom-radio custom-control-inline">
+              <input type="radio" value='4' class="custom-control-input" id="btn-4-five" name="btn5">
+              <label class="custom-control-label" for="btn-4-five">4</label>
+            </div>
+          </div>
+
+          <!-- Default inline 3-->
+          <div class="col-md-2">
+            <div class="custom-control custom-radio custom-control-inline">
+              <input type="radio" value='5' class="custom-control-input" id="btn-5-five" name="btn5">
+              <label class="custom-control-label" for="btn-5-five">5</label>
+            </div>
+          </div>
+        </div>
+
+        <button>submit</button>
+      </div>
+    </form>
+
+  </div>
+
+
+
+
+  <!-- Optional JavaScript -->
+  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <!-- JQuery -->
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <!-- Bootstrap tooltips -->
+  <script type="text/javascript"
+    src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.4/umd/popper.min.js"></script>
+  <!-- Bootstrap core JavaScript -->
+  <script type="text/javascript"
+    src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script>
+  <!-- MDB core JavaScript -->
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.8.3/js/mdb.min.js"></script>
+  <script src="app.js"></script>
+
+</body>
+
+</html>
