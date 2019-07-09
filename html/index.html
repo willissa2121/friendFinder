@@ -39,11 +39,26 @@
 
   <div class="container text-center">
 
-    <h2 id="quiz-header">Please fill out every question to have the best friend matching experience!</h2>
 
 
 
-    <form id="form-group" method="post" action="/quiz">
+    <form id="form-group" method="post" action="/">
+
+      <h2 id="quiz-header">Please fill out every question to have the best friend matching experience!</h2>
+
+      <!-- Email -->
+      <div class="row">
+        <div class="col-md-6">
+          <input type="text" id="Fname" name="Fname" class="form-control mb-4" placeholder="First name">
+        </div>
+        <div class="col-md-6">
+          <input type="text" id="Lname" name="Lname" class="form-control mb-4" placeholder="Last name">
+        </div>
+
+      </div>
+
+      <!-- Password -->
+      <input type="email" name="email" id="emailLogin" class="form-control mb-4" placeholder="Email">
 
       <div class="question-group">
         <!--Radio button group 'will be huge-->
@@ -84,8 +99,7 @@
           <!-- Default inline 2-->
           <div class="col-md-2">
             <div class="custom-control custom-radio custom-control-inline">
-              <input type="radio" value='2' class="custom-control-input" id="btn-2-one"
-                name="btn1">
+              <input type="radio" value='2' class="custom-control-input" id="btn-2-one" name="btn1">
               <label class="custom-control-label" for="btn-2-one">2</label>
             </div>
           </div>
