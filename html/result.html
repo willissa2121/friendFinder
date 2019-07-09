@@ -21,23 +21,25 @@
   <div class="jumbotron text-center">
     <h1 class="display-4 pb-5 ">Your Dream Match!</h1>
     <p class="lead">
-      <a class="btn btn-primary btn-lg" href="#" role="button">See all your friend options!</a>
     </p>
   </div>
 
-
-  <div class="container">
-    <div class="row justify-content-center">
-    <div class="card" style="width: 18rem;">
-      <img class="card-img-top" src="..." alt="Card image cap">
-      <div class="card-body">
-        <h5 class="card-title">Card title</h5>
-        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
-          content.</p>
-        <a href="#" class="btn btn-primary">Go somewhere</a>
+  <div id="myModal" class="modalfade" role="dialog">
+    <div class="modal-dialog">
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <h4 class="modal-title"></h4>
+        </div>
+        <div class="modal-body">
+          <p id="pname"></p>
+          <p id="pemail"></p>
+        </div>
+        <div class="modal-footer">
+        </div>
       </div>
+
     </div>
-  </div>
   </div>
 
 </body>
@@ -53,19 +55,88 @@
   integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
   integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-modal/2.2.6/css/bootstrap-modal-bs3patch.css"></script>
 
-  <script type="text/javascript">
-    $.ajax({url:"./landing",method:"GET"}).then(function(response){
-      let lengthy = response.length-1;
-      for(var i = 0; i < lengthy; i++){
-        console.log(response[i])
-      }
-      //need to make new function that will populate the modal
+<script type="text/javascript">
 
-      $('.card').append("<div>Is this working at all ${a}</div>");
+  $(document).ready(function () {
+    $("#myModal").modal({ show: true });
+  });
+
+  $.ajax({ url: "./landing", method: "GET" }).then(function (response) {
+
+    let lengthy = response.length - 1;
+    let user = response[lengthy]
+    let userSum = user.sum;
+    let emptyA = []
+    for (var i = 0; i < response.length; i++) {
+      emptyA.push(response[i].sum)
+    }
+    emptyA.sort((a, b) => {
+      return a - b
     })
-  </script>
+    let placeholder = emptyA.indexOf(userSum)
+
+    //function that will return nearest sum value
+    let matched = getNearest(placeholder, emptyA, userSum);
+    let matchedUser = findUser(matched, response)
+    //function that will sort through all but users profile and return closest match
+    let breaker = $('<br/>')
+
+    $(".modal-title").append(matchedUser.firstname + " " + matchedUser.lastname);
+    $('#pname').append('You Matched with the Amazing ' + matchedUser.firstname + " " + matchedUser.lastname + '.')
+    $('#pemail').append('Go ahead and contact mark at ' + matchedUser.email)
+
+
+  })
+
+  let findUser = (matched, response) => {
+    for (var i = 0; i < response.length - 1; i++) {
+      if (response[i].sum === matched) {
+        let user = new Person(response[i].firstname, response[i].lastname, response[i].email)
+        return user;
+      }
+    }
+  }
+
+  function Person(fname, lname, email, scores, sum) {
+    this.firstname = fname;
+    this.lastname = lname;
+    this.email = email;
+  }
+
+  let getNearest = (placeholder, emptyA, userSum) => {
+
+    if (placeholder === emptyA - 1) {
+      let marked = placeholder - 1
+      return emptyA[marked]
+    }
+    else if (placeholder === 0) {
+      let marked = 1
+      return emptyA[marked]
+    }
+    else {
+      let upper = placeholder + 1;
+      let lower = placeholder - 1
+      let valLower = emptyA[lower];
+      let valUpper = emptyA[upper];
+      let lowerCalc = userSum - valLower;
+      let upperCalc = Math.abs(userSum - valUpper)
+
+      if (upperCalc <= lowerCalc) {
+        return valUpper
+      }
+      else {
+        return valLower
+      }
+
+    }
+  }
+
+    //need to make new function that will populate the modal
+
+</script>
 
 
 
