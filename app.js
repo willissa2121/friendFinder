@@ -26,7 +26,7 @@ app.listen(PORT, () => {
 
 app.post('/', urlencodedParser, (req, res) => {
   getData(req.body)
-  res.redirect('/landing')
+  res.redirect('/results')
 })
 
 
