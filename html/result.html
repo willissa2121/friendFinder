@@ -34,6 +34,8 @@
         <div class="modal-body">
           <p id="pname"></p>
           <p id="pemail"></p>
+          <p id="all people">To see a list of all possible matches and their scores, coppy this URL into your search bar
+            <strong>https://scottfriend.herokuapp.com/landing</strong></p>
         </div>
         <div class="modal-footer">
         </div>
@@ -86,7 +88,7 @@
 
     $(".modal-title").append(matchedUser.firstname + " " + matchedUser.lastname);
     $('#pname').append('You Matched with the Amazing ' + matchedUser.firstname + " " + matchedUser.lastname + '.')
-    $('#pemail').append('Go ahead and contact mark at ' + matchedUser.email)
+    $('#pemail').append('Go ahead and contact ' + response.firstname + ' at ' + matchedUser.email)
 
 
   })
